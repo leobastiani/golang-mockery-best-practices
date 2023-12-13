@@ -29,4 +29,6 @@ func TestMyComponent(t *testing.T) {
 	// Check that the result and error match the expected values
 	assert.NoError(t, err)
 	assert.Equal(t, 10, result)
+
+	myInterface.AssertExpectations(t)
 }
