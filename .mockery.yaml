@@ -1,1 +1,4 @@
+inpackage: True
 with-expecter: True
+testonly: True
+case: underscore

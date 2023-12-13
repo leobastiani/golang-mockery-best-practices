@@ -2,7 +2,7 @@ package mypackage
 
 import "context"
 
-//go:generate mockery --name MyInterface --outpkg mypackage_mocks --with-expecter=true
+//go:generate mockery --name MyInterface
 type MyInterface[T any] interface {
 	MyMethod(context.Context, T) (int, error)
 }

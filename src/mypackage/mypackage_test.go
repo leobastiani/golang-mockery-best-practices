@@ -5,14 +5,13 @@ import (
 	"testing"
 
 	"github.com/leobastiani/golang-mockery-best-practices/src/mypackage"
-	mypackage_mocks "github.com/leobastiani/golang-mockery-best-practices/src/mypackage/mocks"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 )
 
 func TestMyComponent(t *testing.T) {
 	// Create a new instance of the mock object
-	myInterface := mypackage_mocks.NewMyInterface[string](t)
+	myInterface := mypackage.NewMockMyInterface[string](t)
 	myInterface.EXPECT().MyMethod(
 		mock.MatchedBy(func(_ context.Context) bool { return true }),
 		mock.MatchedBy(func(s string) bool {
