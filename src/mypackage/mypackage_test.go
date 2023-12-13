@@ -12,7 +12,7 @@ import (
 
 func TestMyComponent(t *testing.T) {
 	// Create a new instance of the mock object
-	myInterface := mypackage_mocks.NewMyInterface(t)
+	myInterface := mypackage_mocks.NewMyInterface[string](t)
 	myInterface.EXPECT().MyMethod(
 		mock.MatchedBy(func(_ context.Context) bool { return true }),
 		mock.MatchedBy(func(s string) bool {
