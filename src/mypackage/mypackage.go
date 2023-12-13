@@ -1,5 +1,6 @@
 package mypackage
 
+//go:generate mockery --name MyInterface --outpkg mypackage_mocks --with-expecter=true
 type MyInterface interface {
 	MyMethod() int
 }
