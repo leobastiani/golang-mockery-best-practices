@@ -5,3 +5,7 @@ GOBIN=$(git rev-parse --show-toplevel)/bin go install github.com/vektra/mockery/
 go generate ./...
 go test -v ./...
 ```
+
+I also tried mockery v3
+
+Check out other branches!
