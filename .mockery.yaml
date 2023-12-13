@@ -1,0 +1,16 @@
+# inspired from https://github.com/berachain/polaris/blob/c53168fc3952dd8163a1d4ae718ec811423f322b/.mockery.yaml
+
+# other inspiration https://github.com/bitmagnet-io/bitmagnet/blob/c1e1d8609559b5bbe576c0cbbfd4391cc2685608/.mockery.yml
+
+dir: "{{.InterfaceDir}}/mocks"
+mockname: "{{.InterfaceNameCamel}}"
+filename: "{{.InterfaceNameSnake}}.go"
+outpkg: "mocks"
+
+recursive: True
+with-expecter: True
+
+packages:
+  github.com/leobastiani/golang-mockery-best-practices/src/mypackage:
+    interfaces:
+      MyInterface:
